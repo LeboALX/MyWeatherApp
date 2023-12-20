@@ -1,0 +1,27 @@
+:root {
+    --grey: #75747c;
+    --orange: #e07843;
+    --forn: #8f736f;
+    --yellow: #f8dfc5;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    background-image: linear-gradient(to bottom right, #e07843, #75747c );
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-section {
+    height: 60%;
+    width: 90%;
+    background-image: url(./sky.jpg);
+    background-size: cover;
+}
