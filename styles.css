@@ -4,6 +4,7 @@
     --forn: #8f736f;
     --yellow: #f8dfc5;
     --white: #ffffff;
+    --light-grey: #000000af; 
 }
 
 body {
@@ -28,8 +29,26 @@ body {
     border-radius: 6px;
 }
 
+.icon img {
+    width: 20%;
+}
+
+h1 {
+    position: absolute;
+    bottom: 20%;
+    right: 83%;
+    color: white;
+}
+
+h3 {
+    position: absolute;
+    bottom: 22%;
+    right: 70%;
+    color: white;
+}
+
 .pop-up {
-    background-color:var(--grey);
+    background-color:var(--light-grey);
     width: 40%;
     height: 60%;
     position: absolute;
@@ -37,3 +56,50 @@ body {
     top: 127px;
     border-radius: 6px;
 }
+
+.close-btn {
+    color: var(--white);
+    position: absolute;
+    left: 92%;
+    top: 3%;
+    font-size: larger
+}
+
+.close-btn:hover {
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--orange);
+}
+
+.inputs {
+    position: relative;
+    top: 13%;
+    margin: 10px;
+}
+
+.inputs input {
+    padding: 7px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: var(--white);
+}
+
+.inputs button {
+    padding: 7px;
+    background-color: var(--white);
+    border-radius: 5px;
+    color: var(--orange);
+}
+
+.searches {
+    position: absolute;
+    top: 24%;
+    color: white;
+    margin: 13px;
+    font-size: small;
+}
+
+hr {
+    width: 332%;
+}
+
