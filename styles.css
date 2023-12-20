@@ -24,7 +24,7 @@ body {
 .weather-section {
     height: 60%;
     width: 90%;
-    background-image: url(./sky.jpg);
+    background-image: url(./images/sky.jpg);
     background-size: cover;
     border-radius: 6px;
 }
