@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="./styles.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiq7dWbpEZWswfykhOdjOfFn2gkmCi8yc"></script>
+
 </head>
 <body>
     <div class="pop-up">
@@ -11,8 +13,8 @@
             X
         </div>
         <div class="inputs">
-            <input type="text" placeholder="Search here">
-            <button onclick="getCoordinates()">Search</button>
+            <input id="locationInput" type="text" placeholder="Search here">
+            <button onclick="geocodeAddress()">Search</button>
         </div>  
         <div class="searches">
             <p>Recent search</p>

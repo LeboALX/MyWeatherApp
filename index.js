@@ -1,26 +1,30 @@
-let searchHistory = []
+var searchHistory = [];
+var weatherDetails = [];
 
-const apiUrl = '';
-fetchData(apiUrl)
-  .then(data => {
-    
-    console.log('Fetched data:', data);
-  });
+function getWeather(lat, long){
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=58a13910df54bde6c81acc3ac92cd0be`;
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        weatherDetails = data.weather[0];
+        console.log(weatherDetails)
+    })
+    .catch(error => console.error('Error:', error));  
+}
 
   function geocodeAddress() {
     var geocoder = new google.maps.Geocoder();
     var address = document.getElementById('locationInput').value;
-
+    searchHistory.push(address)
     geocoder.geocode({ 'address': address }, function (results, status) {
       if (status === 'OK') {
         var latitude = results[0].geometry.location.lat();
         var longitude = results[0].geometry.location.lng();
-        var output = document.getElementById('output');
-        output.innerHTML = '<strong>Latitude:</strong> ' + latitude + '<br><strong>Longitude:</strong> ' + longitude;
+        getWeather(latitude, longitude)
+        return
       } else {
-        alert('Geocode was not successful for the following reason: ' + status);
+        alert('Cannot get current location' + status);
       }
     });
    }
 
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
