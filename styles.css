@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
     --grey: #75747c;
     --orange: #e07843;
@@ -31,20 +33,6 @@ body {
 
 .icon img {
     width: 20%;
-}
-
-h1 {
-    position: absolute;
-    bottom: 20%;
-    right: 83%;
-    color: white;
-}
-
-h3 {
-    position: absolute;
-    bottom: 22%;
-    right: 70%;
-    color: white;
 }
 
 .pop-up {
@@ -94,12 +82,32 @@ h3 {
 .searches {
     position: absolute;
     top: 24%;
-    color: white;
+    color: var(--white);
     margin: 13px;
     font-size: small;
 }
 
 hr {
-    width: 332%;
+    width: 305%;
 }
 
+.information {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5em;
+    color: var(--white);
+    position: absolute;
+    bottom: 20%;
+    right: 42%;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.margin-0 {
+    margin: 0;
+}
