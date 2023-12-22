@@ -7,6 +7,7 @@
     --yellow: #f8dfc5;
     --white: #ffffff;
     --black: #000000af; 
+    --light-grey: #50576761;
 }
 
 body {
@@ -76,7 +77,7 @@ body {
     background-color: transparent;
     border: none;
     font-size: large;
-    color: white;
+    color: var(--white);
 }
 
 .pop-up-btn:hover {
@@ -92,13 +93,37 @@ div.search {
 input {
     padding: 4px;
     background-color: transparent;
-    border-color: white;
+    border-color: var(--white);
     border-radius: 6px;
 }
 
 .search button {
     padding: 4px;
     background-color: var(--white);
-    border-radius: 6px;
+    border-radius: 3px;
     color: var(--orange);
+}
+
+.recent {
+    text-decoration: underline;
+    color: var(--white);
+    padding: 10px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.search-history {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.history {
+    width: 94%;
+    border: none;
+    background-color: var(--light-grey);
 }
