@@ -26,5 +26,5 @@ function getWeather(lat, long){
         alert('Cannot get current location' + status);
       }
     });
-   }
+}
 

@@ -1,49 +1,50 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>weather</title>
     <link rel="stylesheet" href="./styles.css">
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiq7dWbpEZWswfykhOdjOfFn2gkmCi8yc"></script>
-
 </head>
+
 <body>
-    <div class="pop-up">
-        <div class="close-btn">
-            X
-        </div>
-        <div class="inputs">
-            <input id="locationInput" type="text" placeholder="Search here">
-            <button onclick="geocodeAddress()">Search</button>
-        </div>  
-        <div class="searches">
-            <p>Recent search</p>
-            <hr>
-        </div>
-    </div>
+
     <div class="main-container">
-        <div class="weather-section">
+        <div class="sky-container">
             <div class="icon">
                 <img src="./images/icon.png" alt="weather icon">
             </div>
-            <footer class="information">
-                <div class="degrees">
-                    <h1>30&deg;C</h1>
-                </div>
-                <div class="city margin-0 flex-column-center">
-                    <h3 class="margin-0">Soweto</h3>
-                    <p><small>Emdeni 2023-12-21 09:45</small></p>
-                </div>
-                <div class="weather-description margin-0 flex-column-center">
-                    <p class="margin-0">Patchy Light Rain</p>
-                    <small>humidity: 64%</small>
-                    <small>Wind: 20.2 km/h</small>
+            <footer>
+                <div class="small-icons">
+                    <div class="degrees">
+                        <h1>30&deg;C</h1>
+                    </div>
+                    <div>
+                        <h3 class="margin-0">Soweto</h3>
+                        <small>Emdeni 2023-12-21 09:45</small>
+                    </div>
+                    <div>
+                        <p class="margin-0">Patchy Light Rain</p>
+                        <small>humidity: 64%</small>
+                        <small>Wind: 20.2 km/h</small>
+                    </div>
                 </div>
             </footer>
+            <div class="pop-up">
+                <div class="close-btn">
+                    <button class="pop-up-btn">X</button>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search here">
+                    <button>Search</button>
+                </div>
+                <div class="recent-search">
+                    
+                </div>
+
+            </div>
         </div>
-
     </div>
-
-    <script src="./index.js"></script>
 </body>
+
 </html>

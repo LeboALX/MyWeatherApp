@@ -6,108 +6,99 @@
     --forn: #8f736f;
     --yellow: #f8dfc5;
     --white: #ffffff;
-    --light-grey: #000000af; 
+    --black: #000000af; 
 }
 
 body {
     margin: 0;
-    height: 100%;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
 }
 
-.main-container {
-    background-image: linear-gradient(to bottom right, #e07843, #75747c );
+.pop-up {
+    background-color:var(--black);
+    width: 47%;
     height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 6px;
+}
+
+.main-container {
+    height: 380px;
+    width: 776px;
+    background-image: linear-gradient(to bottom right, #e07843, #75747c );
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.weather-section {
-    height: 60%;
-    width: 90%;
+.sky-container {
+    height: 75%;
+    width: 75%;
     background-image: url(./images/sky.jpg);
     background-size: cover;
     border-radius: 6px;
+    position: relative;
 }
 
 .icon img {
     width: 20%;
 }
 
-.pop-up {
-    background-color:var(--light-grey);
-    width: 40%;
-    height: 60%;
-    position: absolute;
-    right: 38px;
-    top: 127px;
-    border-radius: 6px;
-}
-
-.close-btn {
-    color: var(--white);
-    position: absolute;
-    left: 92%;
-    top: 3%;
-    font-size: larger
-}
-
-.close-btn:hover {
-    font-size: 25px;
-    cursor: pointer;
-    color: var(--orange);
-}
-
-.inputs {
-    position: relative;
-    top: 13%;
-    margin: 10px;
-}
-
-.inputs input {
-    padding: 7px;
-    background-color: transparent;
-    border-radius: 5px;
-    border-color: var(--white);
-}
-
-.inputs button {
-    padding: 7px;
-    background-color: var(--white);
-    border-radius: 5px;
-    color: var(--orange);
-}
-
-.searches {
-    position: absolute;
-    top: 24%;
-    color: var(--white);
-    margin: 13px;
-    font-size: small;
-}
-
-hr {
-    width: 305%;
-}
-
-.information {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: .5em;
-    color: var(--white);
-    position: absolute;
-    bottom: 20%;
-    right: 42%;
-}
-
-.flex-column-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center
+.small-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        position: absolute;
+        bottom: 0;
+        right: 15%;
+        align-items: center;
+        color: var(--white);
 }
 
 .margin-0 {
     margin: 0;
+}
+
+.close-btn {
+    display: flex;
+    justify-content: end;
+    margin: 10px 
+}
+
+.pop-up-btn {
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    color: white;
+}
+
+.pop-up-btn:hover {
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--orange);
+}
+
+div.search {
+    margin: 10px;
+}
+
+input {
+    padding: 4px;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 6px;
+}
+
+.search button {
+    padding: 4px;
+    background-color: var(--white);
+    border-radius: 6px;
+    color: var(--orange);
 }
