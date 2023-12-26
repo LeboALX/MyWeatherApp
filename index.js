@@ -1,14 +1,25 @@
 // var searchHistory = [];
 // var weatherDetails = [];
 
-const popUp = document.getElementById('popUp');
+// const popUp = document.getElementById('pop-up-btn');
 
-function myFunction() {
-    var popUpBtn = document.getElementById("pop-up-btn");
-    popup.classList.toggle("hidden");
-  }
+// function myFunction() {
+//     var popUpBtn = document.getElementById("pop-up-btn");
+//     popUp.classList.toggle("hidden");
+//   }
+const closeBtn = document.getElementById('close');
 
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=-26.242439&lon=27.822351&appid=58a13910df54bde6c81acc3ac92cd0be"
+closeBtn.addEventListener('close', (event) => {
+  event.preventDefault();
+
+  box.style.display = 'none';
+});
+
+//   function popItUp() {
+//     var popup = document.getElementById("myPopup");
+//     popup.classList.toggle("show");
+// }
+// const apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=-26.242439&lon=27.822351&appid=58a13910df54bde6c81acc3ac92cd0be"
 
 // function getWeather(lat, long){
 //     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=58a13910df54bde6c81acc3ac92cd0be`;
