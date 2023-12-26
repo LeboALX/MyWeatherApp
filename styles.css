@@ -67,10 +67,17 @@ body {
     margin: 0;
 }
 
-.close-btn {
+.closeBtn {
     display: flex;
     justify-content: end;
-    margin: 10px 
+    margin: 10px;
+    color: white;
+}
+
+.closeBtn:hover {
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--orange);
 }
 
 .pop-up-btn {
@@ -80,11 +87,6 @@ body {
     color: var(--white);
 }
 
-.pop-up-btn:hover {
-    font-size: 20px;
-    cursor: pointer;
-    color: var(--orange);
-}
 
 div.search {
     margin: 10px;

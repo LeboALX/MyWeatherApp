@@ -7,12 +7,11 @@
 //     var popUpBtn = document.getElementById("pop-up-btn");
 //     popUp.classList.toggle("hidden");
 //   }
-const closeBtn = document.getElementById('close');
+const closeBtn = document.getElementById('click');
 
-closeBtn.addEventListener('close', (event) => {
+closeBtn.addEventListener('click', (event) => {
   event.preventDefault();
-
-  box.style.display = 'none';
+  popUp.style.display = 'none';
 });
 
 //   function popItUp() {
