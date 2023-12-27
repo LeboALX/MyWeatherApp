@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -12,6 +14,7 @@
         <div class="sky-container">
             <div class="icon">
                 <img src="./images/icon.png" alt="weather icon">
+                <button id="search">Search</button>
             </div>
             <footer>
                 <div class="small-icons">
@@ -30,7 +33,7 @@
                 </div>
             </footer>
             <div id="popUp" class="pop-up">
-                <div id="click" class="closeBtn" onclick="close()">X 
+                <div id="click" class="closeBtn" onclick="close()">X
                 </div>
                 <div class="search">
                     <input type="text" placeholder="Search here">
@@ -49,4 +52,5 @@
 
     <script src="./index.js"></script>
 </body>
+
 </html>

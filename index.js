@@ -12,6 +12,7 @@ const closeBtn = document.getElementById('click');
 closeBtn.addEventListener('click', (event) => {
   event.preventDefault();
   popUp.style.display = 'none';
+
 });
 
 //   function popItUp() {

@@ -48,8 +48,23 @@ body {
     position: relative;
 }
 
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .icon img {
     width: 20%;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--white);
+    border-radius: 10px;
+    border-color: var(--orange);
 }
 
 .small-icons {
@@ -71,7 +86,7 @@ body {
     display: flex;
     justify-content: end;
     margin: 10px;
-    color: white;
+    color: var(--white);
 }
 
 .closeBtn:hover {
@@ -80,16 +95,8 @@ body {
     color: var(--orange);
 }
 
-.pop-up-btn {
-    background-color: transparent;
-    border: none;
-    font-size: large;
-    color: var(--white);
-}
-
-
 div.search {
-    margin: 10px;
+    margin: 7px;
 }
 
 input {
@@ -101,9 +108,10 @@ input {
 
 .search button {
     padding: 4px;
-    background-color: var(--white);
+    background-color: transparent;
     border-radius: 3px;
-    color: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
 }
 
 .recent {
