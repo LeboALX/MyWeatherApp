@@ -1,13 +1,10 @@
 // var searchHistory = [];
 // var weatherDetails = [];
 
-// const popUp = document.getElementById('pop-up-btn');
 
-// function myFunction() {
-//     var popUpBtn = document.getElementById("pop-up-btn");
-//     popUp.classList.toggle("hidden");
-//   }
 const closeBtn = document.getElementById('click');
+const apiKey = "58a13910df54bde6c81acc3ac92cd0be";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=Polokwane";
 
 closeBtn.addEventListener('click', (event) => {
   event.preventDefault();
@@ -15,36 +12,23 @@ closeBtn.addEventListener('click', (event) => {
 
 });
 
-//   function popItUp() {
-//     var popup = document.getElementById("myPopup");
-//     popup.classList.toggle("show");
-// }
-// const apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=-26.242439&lon=27.822351&appid=58a13910df54bde6c81acc3ac92cd0be"
 
-// function getWeather(lat, long){
-//     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=58a13910df54bde6c81acc3ac92cd0be`;
-//     fetch(apiUrl)
-//     .then(response => response.json())
-//     .then(data => {
-//         weatherDetails = data.weather[0];
-//         console.log(weatherDetails)
-//     })
-//     .catch(error => console.error('Error:', error));  
-// }
+async function checkWeather(){
+  const response = await fetch(apiUrl + `&appid=${apiKey}`);
+  var data = await response.json();
 
-//   function geocodeAddress() {
-//     var geocoder = new google.maps.Geocoder();
-//     var address = document.getElementById('locationInput').value;
-//     searchHistory.push(address)
-//     geocoder.geocode({ 'address': address }, function (results, status) {
-//       if (status === 'OK') {
-//         var latitude = results[0].geometry.location.lat();
-//         var longitude = results[0].geometry.location.lng();
-//         getWeather(latitude, longitude)
-//         return
-//       } else {
-//         alert('Cannot get current location' + status);
-//       }
-//     });
-// }
+  console.log(data);
+
+  document.querySelector(".location").innerHTML = data.name;
+  document.querySelector(".temp").innerHTML = Math.round(data.main.temp)  + "&deg;C";
+  document.querySelector(".date").innerHTML = data.timezone;
+  document.querySelector(".description").innerHTML = data.weather[0].description;
+  document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+  document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+  document.querySelector(".picture").innerHTML = data.weather[0].id;
+}
+checkWeather();
+
+
+
 

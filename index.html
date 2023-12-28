@@ -13,22 +13,22 @@
     <div class="main-container">
         <div class="sky-container">
             <div class="icon">
-                <img src="./images/icon.png" alt="weather icon">
+                <img class="picture" src="./images/icon.png" alt="weather icon">
                 <button id="search">Search</button>
             </div>
             <footer>
                 <div class="small-icons">
                     <div class="degrees">
-                        <h1>30&deg;C</h1>
+                        <h1 class="temp">30&deg;C</h1>
                     </div>
                     <div>
-                        <h3 class="margin-0">Soweto</h3>
-                        <small>Emdeni 2023-12-21 09:45</small>
+                        <h3 class="location">Soweto</h3>
+                        <small class="date">Emdeni 2023-12-21 09:45</small>
                     </div>
                     <div>
-                        <p class="margin-0">Patchy Light Rain</p>
-                        <small>humidity: 64%</small>
-                        <small>Wind: 20.2 km/h</small>
+                        <p class="description">Patchy Light Rain</p>
+                        <small class="humidity">humidity: 64%</small>
+                        <small class="wind">Wind: 20.2 km/h</small>
                     </div>
                 </div>
             </footer>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="search">
                     <input type="text" placeholder="Search here">
-                    <button onclick="geocodeAddress()">Search</button>
+                    <button id="searchBtn">Search</button>
                 </div>
                 <div class="recent-search">
                     <p><small class="recent margin-0">Recent search</small></p>
@@ -50,7 +50,9 @@
     </div>
 
 
-    <script src="./index.js"></script>
+    <script src="./index.js">
+        
+    </script>
 </body>
 
 </html>
