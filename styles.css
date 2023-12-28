@@ -6,7 +6,7 @@
     --forn: #8f736f;
     --yellow: #f8dfc5;
     --white: #ffffff;
-    --black: #000000af; 
+    --black: #000000af;
     --light-grey: #50576761;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .pop-up {
-    background-color:var(--black);
+    background-color: var(--black);
     width: 47%;
     height: 100%;
     position: absolute;
@@ -33,7 +33,7 @@ body {
 .main-container {
     height: 380px;
     width: 776px;
-    background-image: linear-gradient(to bottom right, #e07843, #75747c );
+    background-image: linear-gradient(to bottom right, #e07843, #75747c);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@ body {
     position: relative;
 }
 
-.icon{
+.icon {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,14 +68,14 @@ button {
 }
 
 .small-icons {
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-        position: absolute;
-        bottom: 0;
-        right: 15%;
-        align-items: center;
-        color: var(--white);
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    align-items: center;
+    color: var(--white);
 }
 
 .margin-0 {

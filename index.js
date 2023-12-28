@@ -12,14 +12,14 @@ closeBtn.addEventListener('click', (event) => {
   popUp.style.display = 'none';
 });
 
-async function checkWeather(){
+async function checkWeather() {
   const response = await fetch(apiUrl + `&appid=${apiKey}`);
   var data = await response.json();
 
   console.log(data);
 
   document.querySelector(".location").innerHTML = data.name;
-  document.querySelector(".temp").innerHTML = Math.round(data.main.temp)  + "&deg;C";
+  document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "&deg;C";
   document.querySelector(".time").innerHTML = data.timezone;
   document.querySelector(".description").innerHTML = data.weather[0].description;
   document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
