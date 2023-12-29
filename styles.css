@@ -125,6 +125,10 @@ p {
     margin: 0;
 }
 
+p.description {
+    font-size: larger;
+}
+
 .search-history {
     padding: 10px;
     display: flex;

@@ -1,5 +1,5 @@
-var searchHistory = [];
-var weatherDetails = [];
+// var searchHistory = [];
+// var weatherDetails = [];
 
 // const time = document.getElementById('time');
 // const date = document.getElementById('date');
@@ -16,7 +16,7 @@ async function checkWeather() {
   const response = await fetch(apiUrl + `&appid=${apiKey}`);
   var data = await response.json();
 
-  // console.log(data);
+  console.log(data);
 
   document.querySelector(".location").innerHTML = data.name;
   document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "&deg;C";
