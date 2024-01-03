@@ -4,7 +4,6 @@ const closeBtn = document.getElementById('click');
 const searchBtn = document.getElementById('searchBtn');
 let searcha = document.getElementById('searcha');
 const popUp = document.getElementById('popUp');
-const city = document.getElementById('city');
 const imgIcon = document.getElementById('imgIcon');
 const dayTime = document.getElementById('dayTime');
 // const cite = prompt()
