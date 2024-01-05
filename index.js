@@ -34,8 +34,8 @@ function dayTimes(){
 dayTimes()
 
 
-searchBtn.addEventListener('click',btn=>{
-    btn.preventDefault();
+searchBtn.addEventListener('click', event=>{
+    event.preventDefault();
 
     fetch(apiUrl+searcha.value+`&appid=${apiKey}`)
     .then(promise => promise.json())
@@ -48,7 +48,7 @@ searchBtn.addEventListener('click',btn=>{
         const iconUrl = `http://openweathermap.org/img/w/${iconId}.png`;
         document.getElementById('imgIconW').src = iconUrl;
         document.querySelector(".humidity").innerHTML = response.main.humidity + "%";
-        document.querySelector(".wind").innerHTML = response.wind.speed + "km/h";
+        document.querySelector(".wind").innerHTML = response.wind.speed +  "km/h";
         document.querySelector(".description").innerHTML= response.weather[0].description;
         console.log(response.visibility);
 
