@@ -6,11 +6,12 @@ let searcha = document.getElementById('searcha');
 const popUp = document.getElementById('popUp');
 const imgIcon = document.getElementById('imgIcon');
 const dayTime = document.getElementById('dayTime');
-// const cite = prompt()
+
 
 
 const apiKey = "58a13910df54bde6c81acc3ac92cd0be";
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
+
 
 search.addEventListener('click', (event) =>{
   event.preventDefault();
@@ -52,11 +53,7 @@ searchBtn.addEventListener('click', event=>{
         document.querySelector(".description").innerHTML= response.weather[0].description;
         console.log(response.visibility);
 
-        // searcha.value=""
-
-    })
-    //  city.innerHTML = searcha.value;
-    
+    }) 
 })
 
 
